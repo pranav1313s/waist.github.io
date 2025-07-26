@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Anchal Sen!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff80ab, #ffd740 70%, #81d4fa);
+      overflow-x: hidden;
+      min-height: 100vh;
+      animation: bgMove 8s alternate infinite;
+      margin:0;
+      font-family: 'Roboto', sans-serif;
+    }
+    @keyframes bgMove {
+      from { background-position: left; }
+      to { background-position: right; }
+    }
+    .container {
+      text-align: center;
+      padding: 2rem 1rem 2rem 1rem;
+      position: relative;
+    }
+    .main-heading {
+      font-size: 2.7rem;
+      font-family: 'Pacifico', cursive;
+      font-weight: 900;
+      background: linear-gradient(90deg,#ff1744,#ffd740,#00e676,#81d4fa,#ea80fc,#ff1744);
+      background-size: 300%;
+      color: white;
+      padding: 1.1em 0.5em 0.5em 0.5em;
+      border-radius: 1em;
+      margin: 0.5em 0 1em;
+      letter-spacing:2px;
+      text-shadow: 3px 3px 12px #ea80fc, 0 2px #00bcd4;
+      animation: colorflow 3s linear infinite;
+      font-weight: bold;
+      box-shadow: 0 8px 40px #ffd74044;
+    }
+    @keyframes colorflow {
+      0% { background-position: 0%;}
+      100% { background-position: 200%;}
+    }
+    .btn {
+      background: linear-gradient(90deg,#ffd740,#ea80fc,#80deea);
+      color: #fff;
+      border: none;
+      font-size: 1.2rem;
+      padding: 1em 2.3em;
+      border-radius: 2em;
+      font-weight: bold;
+      cursor:pointer;
+      box-shadow: 2px 2px 22px #ff80ab99;
+      margin: 2.5em auto 1em auto;
+      display: block;
+      transition: transform 0.2s;
+      animation: floatBtn 1.5s infinite alternate;
+    }
+    @keyframes floatBtn {
+      0% {transform:translateY(0)}
+      100% {transform:translateY(-8px)}
+    }
+    .wish-list {
+      margin: 3em auto 2em auto;
+      max-width: 760px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.1em;
+    }
+    .wish {
+      background: linear-gradient(120deg,#ffcc80,#b39ddb,#80deea,#ff80ab);
+      padding: 1.3em 1.2em;
+      border-radius: 2em;
+      font-size: 1.13rem;
+      color: #5d1049;
+      font-weight: bold;
+      min-width: 220px;
+      max-width: 300px;
+      box-shadow: 4px 4px 18px #ffd74060, 2px 2px 8px #ea80fc55;
+      animation: pop-in 1.1s both cubic-bezier(0,1.5,0.9,1.2);
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    @keyframes pop-in {
+      to {opacity: 1; transform: scale(1);}
+    }
+    /* Confetti canvas for effect */
+    .confetti {
+      position: fixed;
+      top:0; left:0; width:100vw; height:100vh;
+      pointer-events: none;
+      z-index: 1000;
+    }
+    /* Next-Page (Slide) Styles */
+    #nextPage {
+      display:none; 
+      position:fixed; 
+      top:0; left:0; 
+      width:100vw; 
+      height:100vh; 
+      background:linear-gradient(120deg,#ffd740 40%,#ea80fc 80%);
+      z-index:2000;
+      text-align:center;
+      box-shadow: 0 12px 52px #ff80ab88;
+      padding-top:6vh;
+      animation: slideIn 0.8s cubic-bezier(.37,1.7,.71,.93);
+    }
+    @keyframes slideIn {
+      0% {transform:translateX(100vw);}
+      100% {transform:translateX(0);}
+    }
+    #myLines {
+      font-size:1.28rem;
+      color:#311b92;
+      font-family:'Roboto',sans-serif;
+      margin: 2.3em 0 0.6em 0;
+      padding:1em;
+      background:linear-gradient(103deg,#b2ff59,#ff80ab22 75%);
+      border-radius:1em;
+      font-weight:bold;
+      box-shadow: 1px 1px 21px #ffcc800f;
+      display:inline-block;
+    }
+    /* Large, bold, animated heading */
+    .gigantic-bold {
+      font-size:2.2rem;
+      color:#ff1744;
+      font-weight:900;
+      letter-spacing:2px;
+      text-shadow:3px 4px #ffd600,2px 2px #80deea;
+      background:linear-gradient(90deg,#fff176,#ea80fc,#ff80ab,#ffd740,#81d4fa);
+      :text;
+      -webkit-text-fill-color:transparent;
+      animation: rainbow 3s linear infinite;
+      margin:0.5em 0 1.5em 0;
+    }
+    @keyframes rainbow {
+        0% { filter: hue-rotate(0deg);}
+        100% { filter: hue-rotate(360deg);}
+    }
+
+    .closeNextPageBtn {
+      margin-top:2em; background:#ff1744; color:#fff; border-radius:1em; 
+      padding:0.85em 2em; font-weight:bold; border:none; cursor:pointer; font-size:1.13rem;
+      transition:background 0.2s;
+    }
+    .closeNextPageBtn:hover {
+      background: #e040fb;
+    }
+    @media (max-width:600px) {
+      .main-heading { font-size:1.3rem; }
+      .gigantic-bold { font-size:1.14rem;}
+      .wish-list { font-size:0.97rem;}
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+  <div class="container" id="mainPage">
+    <div class="main-heading">
+      🎉 <span style="font-size:2.1rem;">Anchal Sen you are so amazing I am obsessed!</span> 🎉
+    </div>
+    <button class="btn" id="nextPageBtn">💌 Read My Special Message &rarr;</button>
+    <div class="wish-list" id="wishes"></div>
+  </div>
+  <!-- Next "page" (slide) for your custom lines -->
+  <div id="nextPage">
+    <div class="gigantic-bold">My Heartfelt Birthday Lines for Anchal:</div>
+    <div id="myLines">
+      Happy 18th, Anchal!<br>
+      You fill the world with color and joy.<br>
+      I'm so lucky to meet you are the very charming girl and alaways i think about you gives me a—<br>
+      always diffrent type happiness.i  don't know where it is attraction or love for you,but you are my fav and always be.always shining, always inspiring.<br>
+      Here's to a lifetime of magic and dreams come true!
+      all the best for your future 
+      happy birthday madam ji 
+    </div>
+    <button class="closeNextPageBtn" onclick="closeNextPage()">&#8592; Back to Birthday Wishes</button>
+  </div>
+  <script>
+    // Wishes to display (feel free to add more wishes!)
+    const wishes = [
+      "Happy 18th Birthday, Anchal! May your year sparkle with adventure and laughter.",
+      "The world shines brighter because you are in it—keep smiling and dreaming!",
+      "Eighteen years of stunning smiles, kindness, and memories—time to shine brighter than ever!",
+      "Heartfelt cheers to new adventures, happiness, and unforgettable moments!",
+      "Celebrate YOU—because you’re truly amazing, Anchal.",
+      "May your future bloom as beautifully as your spirit.",
+      "Here's to chases, challenges, and chocolate cake—enjoy every moment!",
+      "So proud of all you’ve grown to be. The best is just beginning!",
+      "On this special day, may love surround you always.",
+      "Raise a toast—your adulthood journey is just getting started!",
+      "You are living proof magic is real.",
+      "There’s only one you—thank goodness for that! Happy Birthday.",
+      "Keep dancing through life, heart open, dreams fearless.",
+      // Your own wish—add as many as you like!
+    ];
+    // Show them with animated effect
+    const wishesDiv = document.getElementById("wishes");
+    wishes.forEach((wish, idx) => {
+      const div = document.createElement("div");
+      div.className = "wish";
+      div.innerHTML = wish;
+      div.style.animationDelay = (idx * 0.23) + 's';
+      wishesDiv.appendChild(div);
+      setTimeout(() => div.style.opacity = 1, 400 + idx*230);
+      setTimeout(() => div.style.transform = 'scale(1)', 400 + idx*230);
+    });
+    // Colorful Confetti
+    const confetti = document.querySelector('.confetti');
+    const ctx = confetti.getContext('2d');
+    let W = window.innerWidth, H = window.innerHeight;
+    confetti.width = W; confetti.height = H;
+    let particles = [];
+    for(let i=0;i<140;i++) {
+      particles.push({
+        x: Math.random()*W, y: Math.random()*H-H,
+        r:Math.random()*8+3, d:Math.random()*60+10,
+        c: `hsl(${Math.random()*360},90%,65%)`,
+        tilt: Math.random()*8-4,
+        tiltAngle: Math.random()*Math.PI,
+        tiltAngleSpeed: 0.035+Math.random()*0.033
+      });
+    }
+    function drawConfetti() {
+      ctx.clearRect(0,0,W,H);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.lineWidth = p.r;
+        ctx.strokeStyle = p.c;
+        ctx.moveTo(p.x + p.tilt + Math.sin(p.tiltAngle) * 8, p.y);
+        ctx.lineTo(p.x, p.y + p.tilt + Math.cos(p.tiltAngle) * 8);
+        ctx.stroke();
+      });
+      updateConfetti();
+      requestAnimationFrame(drawConfetti);
+    }
+    function updateConfetti() {
+      particles.forEach(p => {
+        p.y += Math.cos(p.d) + 2 + p.r/3;
+        p.x += Math.sin(p.d)*1.7;
+        p.tiltAngle += p.tiltAngleSpeed;
+        if(p.y > H) {
+          p.x = Math.random()*W;
+          p.y = -10;
+        }
+      });
+    }
+    drawConfetti();
+    window.addEventListener("resize", () => {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      confetti.width = W;
+      confetti.height = H;
+    });
+    // "Next Page" (slide) with your lines
+    document.getElementById('nextPageBtn').onclick = function() {
+      document.getElementById('mainPage').style.opacity = "0.1";
+      document.getElementById('nextPage').style.display = 'block';
+    };
+    function closeNextPage() {
+      document.getElementById('mainPage').style.opacity = "1";
+      document.getElementById('nextPage').style.display = 'none';
+    }
+    window.closeNextPage = closeNextPage;
+  </script>
+</body>
+</html>

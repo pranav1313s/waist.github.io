@@ -1,0 +1,129 @@
+/* General body and font styles */
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ff80ab 0%, #ffd740 100%);
+  font-family: 'Roboto', sans-serif;
+  color: #4a003f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Container or wrapper */
+.container {
+  max-width: 700px;
+  background: #fff9fbcc;
+  border-radius: 2rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 30px rgb(255 128 171 / 0.4);
+  animation: fadeInScale 1.3s ease forwards;
+}
+
+/* Animate container on load */
+@keyframes fadeInScale {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Main heading style */
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff1744, #ffd740, #00e676, #81d4fa, #ea80fc);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 4s linear infinite;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 12px #ea80fccc;
+  letter-spacing: 3px;
+  user-select: none;
+}
+
+/* Rainbow text animation */
+@keyframes rainbowText {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Button style */
+.button-special-message {
+  background: linear-gradient(90deg, #ffd740, #ea80fc, #80deea);
+  color: white;
+  font-weight: bold;
+  padding: 1em 2.5em;
+  font-size: 1.2rem;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 4px 4px 15px rgb(255 128 171 / 0.6);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 1.5rem auto 3rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button-special-message:hover,
+.button-special-message:focus {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 6px 6px 20px rgb(255 128 171 / 0.8);
+  outline: none;
+}
+
+/* Section subheading */
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  color: #5d1049;
+  margin-bottom: 1.2rem;
+  text-shadow: 1px 1px 5px #ffd740bb;
+}
+
+/* Birthday lines style */
+.birthday-lines {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #311b92;
+  background: linear-gradient(135deg, #b2ff59 0%, #ff80ab22 75%);
+  padding: 1.3rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 25px #ffcc8050;
+  white-space: pre-line; /* preserve line breaks */
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  user-select: text;
+}
+
+/* Back button style */
+.back-button {
+  background: #ff1744;
+  color: white;
+  font-weight: 700;
+  border-radius: 1em;
+  padding: 0.85em 2em;
+  border: none;
+  box-shadow: 2px 2px 18px #ff80abbb;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background: #e040fb;
+  outline: none;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 600px) {
+  .container {
